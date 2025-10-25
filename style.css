@@ -69,6 +69,8 @@ nav ul li a:hover {
   font-weight: 700;
   margin-bottom: 20px;
   margin-left: 50px;
+  animation-name: move1;
+  animation-duration: 2s;
 }
 .hero-section h2 span {
   color: #e2441f;
@@ -81,6 +83,8 @@ nav ul li a:hover {
   margin-bottom: 30px;
   margin-left: 50px;
   width: 80%;
+  animation-name: move2;
+  animation-duration: 3s;
 }
 .hero-section .cv {
   background-color: #4aa5b4;
@@ -92,6 +96,7 @@ nav ul li a:hover {
   border-radius: 5px;
   transition: all 0.5s ease;
 }
+
 .hero-section .contact {
   background-color: transparent;
   color: #fff;
@@ -119,11 +124,38 @@ nav ul li a:hover {
   border-radius: 10px;
   border: 1px solid #e2441f;
   box-shadow: 0 0 10px #fff;
+  animation-name: move;
+  animation-duration: 2s;
 }
 .hero-section img:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
+@keyframes move {
+  0% {
+    transform: translate(600px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes move1 {
+  0% {
+    transform: translate(-600px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes move2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* hero section end  */
 
 /* certificate start  */
@@ -153,6 +185,7 @@ nav ul li a:hover {
   transition: all 0.5s ease;
   margin: 20px;
   width: 300px;
+  
 }
 .certificate .images img:hover {
   border: 1px solid #4aa5b4;
@@ -178,6 +211,7 @@ nav ul li a:hover {
   font-size: 50px;
   font-weight: 700;
   margin-bottom: 10px;
+  animation-name: ;
 }
 .about p {
   font-size: 16px;
@@ -185,9 +219,12 @@ nav ul li a:hover {
   margin-bottom: 30px;
   width: 600px;
   line-height: 30px;
+  animation-name: ;
 }
 .about img {
   transition: all 0.5s ease;
+  animation-name: move1;
+  animation-duration: 2s;
 }
 .about img:hover {
   transform: scale(1.1);
@@ -550,6 +587,11 @@ nav ul li a:hover {
   background: #02232e;
   color: #fff;
   flex-wrap: wrap;
+}
+
+.contact-section:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 .form-container {
