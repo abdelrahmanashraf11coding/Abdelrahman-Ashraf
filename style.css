@@ -10,6 +10,8 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  height: 100vh;
+  max-width: 100svw;
 }
 
 /* header start  */
