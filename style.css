@@ -132,8 +132,8 @@ nav ul li a:hover {
   animation-duration: 3s;
 }
 .hero-section .cv {
-  background-color: #4aa5b4;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   font-size: 16px;
   font-weight: 500;
   padding: 10px 20px;
