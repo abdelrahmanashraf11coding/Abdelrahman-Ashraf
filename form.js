@@ -27,3 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+  const toggleCheckbox = document.querySelector(".toogle__cheakbox");
+  const body = document.body;
+
+  // لو المستخدم اختار ثيم قبل كده، نحفظه
+
+
+

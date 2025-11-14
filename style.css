@@ -23,6 +23,7 @@ header {
   z-index: 1000;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 15px 16px;
   transition: all 0.5s ease;
@@ -52,6 +53,48 @@ nav ul li a:hover {
   font-size: 16px;
   font-weight: 600;
   color: #4aa5b4;
+}
+/* toogle */
+.toogle {
+  display: flex;
+  align-items: center;
+  margin: 0 50px;
+  gap: 16px;
+}
+.toogle__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.toogle__cheakbox {
+  display: none;
+}
+.toogle__label {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.toogle__label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  display: block;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.toogle__cheakbox:checked + .toogle__label {
+  background-color: #4aa5b4;
+}
+.toogle__cheakbox:checked + .toogle__label::before {
+  transform: translateX(25px);
 }
 
 /* header end  */
@@ -97,6 +140,30 @@ nav ul li a:hover {
   margin-left: 50px;
   border-radius: 5px;
   transition: all 0.5s ease;
+}
+.arrow {
+  display: inline-block;
+  margin-left: 10px;
+  transition: all 0.5s ease;
+  animation-name: arrow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;  
+}
+@keyframes arrow {
+  0% {
+    transform: translatey(5px);
+  }
+  50% {
+    transform: translatey(-5px);
+  }
+  75% {
+    transform: translatey(0);
+  }
+  100% {
+    transform: translatey(0);
+  }
 }
 
 .hero-section .contact {
@@ -187,7 +254,6 @@ nav ul li a:hover {
   transition: all 0.5s ease;
   margin: 20px;
   width: 300px;
-  
 }
 .certificate .images img:hover {
   border: 1px solid #4aa5b4;
@@ -741,6 +807,11 @@ button:hover {
   color: #888;
   margin-top: 20px;
 }
+/* thems */
+.light {
+  background-color: #fff;
+  color: #333;
+}
 
 /* ===== Responsive ===== */
 /* 📱 الموبايل (شاشات صغيرة لحد 767px) */
@@ -805,9 +876,14 @@ button:hover {
   .services-content,
   .portfolios,
   .feedback-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
     display: grid;
+    align-items: center;
+    justify-content: center;
     justify-items: center;
+  }
+  .skills-container img {
+    width: 80%;
   }
 
   .services img {
