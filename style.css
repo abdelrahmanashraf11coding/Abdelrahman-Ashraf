@@ -5,8 +5,11 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  scroll-behavior: smooth;
   position: relative;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -106,7 +109,7 @@ nav ul li a:hover {
   transition: transform 0.3s ease;
 }
 .toogle__cheakbox:checked + .toogle__label {
-  background-color: var(--main-color);
+  background-color: var(--bg1-color);
 }
 .toogle__cheakbox:checked + .toogle__label::before {
   transform: translateX(25px);
@@ -244,12 +247,12 @@ nav ul li a:hover {
 
 /* certificate start  */
 .certificate {
-  background-image:var(--background-image);
+  background-image: var(--background-image);
 }
 .certificate h2 {
   font-size: 40px;
   font-weight: 700;
-  color: var(--text-color);
+  color: var(--main-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,7 +297,7 @@ nav ul li a:hover {
   font-size: 50px;
   font-weight: 700;
   margin-bottom: 10px;
-  animation-name: ;
+  animation-name: move2;
 }
 .about p {
   font-size: 16px;
@@ -326,6 +329,7 @@ nav ul li a:hover {
 .skills-content .sk {
   font-size: 50px;
   font-weight: 700;
+  color: var(--main-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -380,6 +384,7 @@ nav ul li a:hover {
   font-weight: 700;
   display: flex;
   justify-content: center;
+  color: var(--main-color);
   align-items: center;
   text-transform: capitalize;
 }
@@ -822,11 +827,8 @@ button:hover {
   color: var(--bg2-color);
   margin-top: 20px;
 }
-/* thems */
-.light {
-  background-color: var(--text-color);
-  color: var(--text-color2);
-}
+
+/* end thems */
 
 /* ===== Responsive ===== */
 /* 📱 الموبايل (شاشات صغيرة لحد 767px) */
@@ -847,7 +849,7 @@ button:hover {
   }
 
   .hero-section {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
     padding: 80px 20px;
   }
@@ -869,7 +871,7 @@ button:hover {
   }
 
   .hero-section img {
-    width: 80%;
+    width: 100%;
     margin: 20px 0;
   }
 
@@ -938,7 +940,7 @@ button:hover {
   }
 
   .hero-section img {
-    width: 50%;
+    width: 100%;
   }
 
   .about p {
