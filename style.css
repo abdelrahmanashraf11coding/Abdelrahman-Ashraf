@@ -15,6 +15,20 @@ body {
   overflow-x: hidden;
 }
 
+:root {
+  --second-color: #e2441f;
+  --main-color: #4aa5b4;
+  --third-color: #d77b37;
+  --text-color: #fff;
+  --text-color2: #333;
+  --bg1-color: #000;
+  --bg2-color: #ccc;
+  --background-image: linear-gradient(#022517, #032728, #032728, #000);
+  --border: rgba(0, 255, 255, 0.2);
+  --box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+  --transition: all 0.5s ease;
+}
+
 /* header start  */
 header {
   position: fixed;
@@ -27,10 +41,10 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 15px 16px;
-  transition: all 0.5s ease;
-  color: #fff;
-  border: 1px solid #fff;
-  background: #000;
+  transition: var(--transition);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  background: var(--bg1-color);
   opacity: 0.9;
 }
 nav ul {
@@ -39,21 +53,21 @@ nav ul {
   gap: 20px;
 }
 header h1 {
-  color: #ffff;
+  color: var(--text-color);
   margin-left: 50px;
 }
 nav ul li a {
-  color: #fff;
+  color: var(--text-color);
   font-size: 16px;
   font-weight: 500;
   transition: all 0.5s ease;
   margin-right: 25px;
 }
 nav ul li a:hover {
-  color: #fff;
+  color: var(--text-color);
   font-size: 16px;
   font-weight: 600;
-  color: #4aa5b4;
+  color: var(--main-color);
 }
 /* toogle */
 .toogle {
@@ -74,7 +88,7 @@ nav ul li a:hover {
   display: block;
   width: 50px;
   height: 25px;
-  background-color: #ccc;
+  background-color: var(--bg2-color);
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -87,12 +101,12 @@ nav ul li a:hover {
   width: 21px;
   height: 21px;
   display: block;
-  background-color: #fff;
+  background-color: var(--text-color);
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
 .toogle__cheakbox:checked + .toogle__label {
-  background-color: #4aa5b4;
+  background-color: var(--main-color);
 }
 .toogle__cheakbox:checked + .toogle__label::before {
   transform: translateX(25px);
@@ -107,8 +121,8 @@ nav ul li a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 100px 16px;
-  background-image: linear-gradient(#022517, #032728, #032728, #000);
-  color: #fff;
+  background-image: var(--background-image);
+  color: var(--text-color);
 }
 .hero-section h2 {
   font-size: 50px;
@@ -119,7 +133,7 @@ nav ul li a:hover {
   animation-duration: 2s;
 }
 .hero-section h2 span {
-  color: #e2441f;
+  color: var(--second-color);
   font-weight: 900;
   font-size: 50px;
 }
@@ -133,14 +147,14 @@ nav ul li a:hover {
   animation-duration: 3s;
 }
 .hero-section .cv {
-  background-color: #fff;
-  color: #000;
+  background-color: var(--text-color);
+  color: var(--bg1-color);
   font-size: 16px;
   font-weight: 500;
   padding: 10px 20px;
   margin-left: 50px;
   border-radius: 5px;
-  transition: all 0.5s ease;
+  transition: var(--transition);
 }
 .arrow {
   display: inline-block;
@@ -150,7 +164,7 @@ nav ul li a:hover {
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  animation-direction: alternate;  
+  animation-direction: alternate;
 }
 @keyframes arrow {
   0% {
@@ -169,31 +183,31 @@ nav ul li a:hover {
 
 .hero-section .contact {
   background-color: transparent;
-  color: #fff;
-  border: 1px solid #ffff;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
   font-size: 16px;
   font-weight: 500;
   padding: 10px 20px;
   border-radius: 5px;
-  transition: all 0.5s ease;
+  transition: var(--transition);
   margin: 10px;
 }
 .hero-section .contact:hover {
-  background-color: #4aa5b4;
-  color: #fff;
+  background-color: var(--main-color);
+  color: var(--text-color);
 }
 .hero-section a:hover {
   background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
 }
 .hero-section img {
   transition: all 0.5s ease;
   margin-right: 50px;
   margin: 50px 50px;
   border-radius: 10px;
-  border: 1px solid #e2441f;
-  box-shadow: 0 0 10px #fff;
+  border: 1px solid var(--second-color);
+  box-shadow: 0 0 10px var(--text-color);
   animation-name: move;
   animation-duration: 2s;
 }
@@ -230,12 +244,12 @@ nav ul li a:hover {
 
 /* certificate start  */
 .certificate {
-  background-image: linear-gradient(#092a31, #092a31, #092a31, #000);
+  background-image:var(--background-image);
 }
 .certificate h2 {
   font-size: 40px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,16 +264,16 @@ nav ul li a:hover {
 }
 .certificate .images img {
   border-radius: 10px;
-  border: 1px solid #e2441f;
-  box-shadow: 0 0 10px #fff;
-  transition: all 0.5s ease;
+  border: 1px solid var(--second-color);
+  box-shadow: 0 0 10px var(--text-color);
+  transition: var(--transition);
   margin: 20px;
   width: 300px;
 }
 .certificate .images img:hover {
-  border: 1px solid #4aa5b4;
-  border: 1px solid #4aa5b4;
-  box-shadow: 0 0 10px #4aa5b4;
+  border: 1px solid var(--main-color);
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -273,8 +287,8 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   padding: 100px 16px;
-  background-image: linear-gradient(#092a31, #092a31, #092a31, #000);
-  color: #fff;
+  background-image: var(--background-image);
+  color: var(--text-color);
 }
 .about h2 {
   font-size: 50px;
@@ -288,7 +302,7 @@ nav ul li a:hover {
   margin-bottom: 30px;
   width: 600px;
   line-height: 30px;
-  animation-name: ;
+  animation-name: move2;
 }
 .about img {
   transition: all 0.5s ease;
@@ -306,8 +320,8 @@ nav ul li a:hover {
 
 .skills-content {
   padding: 10px 16px;
-  background-image: linear-gradient(#092a31, #092a31, #092a31);
-  color: #fff;
+  background-image: var(--background-image);
+  color: var(--text-color);
 }
 .skills-content .sk {
   font-size: 50px;
@@ -330,22 +344,22 @@ nav ul li a:hover {
   flex-direction: column;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid #e2441f;
-  box-shadow: 0 0 10px #fff;
-  transition: all 0.5s ease;
+  border: 1px solid var(--second-color);
+  box-shadow: 0 0 10px var(--text-color);
+  transition: var(--transition);
   gap: 17px;
   text-transform: capitalize;
   margin: 15px;
 }
 .skills:hover {
-  border: 1px solid #4aa5b4;
-  border: 1px solid #4aa5b4;
-  box-shadow: 0 0 10px #4aa5b4;
+  border: 1px solid var(--main-color);
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
   cursor: pointer;
   transform: scale(1.1);
 }
 .skills img {
-  transition: all 0.5s ease;
+  transition: var(--transition);
 }
 .skills img:hover {
   transform: scale(1.1);
@@ -358,8 +372,8 @@ nav ul li a:hover {
 
 .services-all {
   padding: 10px 16px;
-  background-image: linear-gradient(#092a31, #092a31, #092a31);
-  color: #fff;
+  background-image: var(--background-image);
+  color: var(--text-color);
 }
 .services-all h2 {
   font-size: 50px;
@@ -382,9 +396,9 @@ nav ul li a:hover {
   flex-direction: column;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid #e2441f;
-  box-shadow: 0 0 10px #fff;
-  transition: all 0.5s ease;
+  border: 1px solid var(--second-color);
+  box-shadow: 0 0 10px var(--text-color);
+  transition: var(--transition);
   gap: 17px;
   text-transform: capitalize;
   margin: 15px;
@@ -405,23 +419,23 @@ nav ul li a:hover {
 .services a {
   border-radius: 10px;
   padding: 10px 20px;
-  background-color: #4aa5b4;
-  color: #fff;
+  background-color: var(--main-color);
+  color: var(--text-color);
   text-transform: capitalize;
   margin: 20px;
   text-align: center;
 }
 .services a:hover {
-  border: 1px solid #4aa5b4;
-  border: 1px solid #4aa5b4;
-  box-shadow: 0 0 10px #4aa5b4;
+  border: 1px solid var(--main-color);
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
   cursor: pointer;
 }
 .services img {
   border-radius: 10px;
-  border: 1px solid #e2441f;
-  box-shadow: 0 0 10px #fff;
-  transition: all 0.5s ease;
+  border: 1px solid var(--second-color);
+  box-shadow: 0 0 10px var(--text-color);
+  transition: var(--transition);
   margin: 20px;
   width: 300px;
 }
@@ -431,9 +445,9 @@ nav ul li a:hover {
 }
 
 .services:hover {
-  border: 1px solid #4aa5b4;
-  border: 1px solid #4aa5b4;
-  box-shadow: 0 0 10px #4aa5b4;
+  border: 1px solid var(--main-color);
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
   cursor: pointer;
   transform: scale(1.1);
 }
@@ -443,8 +457,8 @@ nav ul li a:hover {
 
 .portfolio-all {
   padding: 60px 20px;
-  background-color: #001c24;
-  color: #fff;
+  background-color: var(--bg1-color);
+  color: var(--text-color);
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
@@ -454,7 +468,7 @@ nav ul li a:hover {
   font-weight: 700;
   margin-bottom: 40px;
   text-transform: capitalize;
-  color: #00f0ff;
+  color: var(--main-color);
   letter-spacing: 1px;
 }
 
@@ -469,9 +483,9 @@ nav ul li a:hover {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-  background: #011f28;
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+  background: var(--bg1-color);
+  border: 1px solid var(--border);
+  box-shadow: var(--box-shadow);
   transition: all 0.4s ease;
   cursor: pointer;
   text-decoration: none;
@@ -493,22 +507,22 @@ nav ul li a:hover {
 }
 
 .portfolio h3 {
-  color: #fff;
+  color: var(--text-color);
   font-size: 1.3rem;
   margin-bottom: 8px;
 }
 
 .tech {
   display: block;
-  color: #00f0ff;
+  color: var(--main-color);
   font-size: 0.9rem;
-  border-left: 3px solid #00f0ff;
+  border-left: 3px solid var(--main-color);
   padding-left: 8px;
   margin-bottom: 10px;
 }
 
 .portfolio p {
-  color: #ccc;
+  color: var(--bg2-color);
   font-size: 0.95rem;
   margin-bottom: 15px;
 }
@@ -520,9 +534,9 @@ nav ul li a:hover {
 
 .buttons a {
   text-decoration: none;
-  color: #fff;
-  background: #002c37;
-  border: 1px solid #00f0ff;
+  color: var(--text-color);
+  background: var(--bg1-color);
+  border: 1px solid var(--main-color);
   padding: 8px 16px;
   border-radius: 8px;
   transition: 0.3s;
@@ -530,14 +544,14 @@ nav ul li a:hover {
 }
 
 .buttons a:hover {
-  background: #00f0ff;
-  color: #001c24;
+  background: var(--main-color);
+  color: var(--bg2-color);
 }
 
 .portfolio:hover {
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  box-shadow: var(--box-shadow);
   transform: translateY(-5px);
-  border: 1px solid rgba(0, 255, 255, 0.3);
+  border: 1px solid var(--border);
 }
 
 .portfolio:hover img {
@@ -558,18 +572,18 @@ nav ul li a:hover {
 .testimonials {
   text-align: center;
   padding: 80px 20px;
-  background-color: #02232e;
+  background-color: var(--bg1-color);
 }
 
 .testimonials h2 {
   font-size: 36px;
   font-weight: 700;
-  color: #d77b37;
+  color: var(--third-color);
   margin-bottom: 15px;
 }
 
 .testimonials p {
-  color: #b4c5c7;
+  color: var(--bg2-color);
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 60px;
@@ -585,19 +599,19 @@ nav ul li a:hover {
 
 /* الكارت */
 .feedback-card {
-  background-color: #052c37;
+  background-color: var(--bg1-color);
   border-radius: 15px;
   padding: 40px 25px 25px;
   width: 320px;
   text-align: center;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  box-shadow: var(--box-shadow);
   position: relative;
-  transition: all 0.4s ease;
+  transition: var(--transition);
 }
 
 .feedback-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  box-shadow: var(--box-shadow);
   cursor: pointer;
 }
 
@@ -607,17 +621,17 @@ nav ul li a:hover {
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #00f0ff;
+  border: 3px solid var(--main-color);
   position: absolute;
   top: -40px;
   left: 50%;
   transform: translateX(-50%);
-  background: #011c23;
+  background: var(--bg1-color);
 }
 
 /* نص التقييم */
 .feedback-text {
-  color: #cdd5d7;
+  color: var(--bg2-color);
   font-size: 14px;
   line-height: 1.6;
   margin-top: 50px;
@@ -626,13 +640,13 @@ nav ul li a:hover {
 
 /* الاسم والوظيفة */
 .feedback-card h3 {
-  color: #fff;
+  color: var(--text-color);
   font-size: 18px;
   margin-bottom: 5px;
 }
 
 .role {
-  color: #9bbcc2;
+  color: var(--main-color);
   font-size: 14px;
   display: block;
   margin-bottom: 15px;
@@ -640,7 +654,7 @@ nav ul li a:hover {
 
 /* النجوم */
 .stars {
-  color: #ff914d;
+  color: var(--third-color);
   font-size: 18px;
 }
 
@@ -653,29 +667,29 @@ nav ul li a:hover {
   align-items: flex-start;
   gap: 40px;
   padding: 50px;
-  background: #02232e;
-  color: #fff;
+  background: var(--bg1-color);
+  color: var(--bg2-color);
   flex-wrap: wrap;
 }
 
 .contact-section:hover {
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  box-shadow: var(--box-shadow);
   cursor: pointer;
 }
 
 .form-container {
   flex: 1;
   min-width: 350px;
-  background: #fff;
+  background: var(--text-color);
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
 .form-container h2 {
   margin-bottom: 20px;
   text-align: center;
-  color: #333;
+  color: var(--text-color2);
 }
 
 form {
@@ -688,14 +702,14 @@ label {
   display: flex;
   flex-direction: column;
   font-weight: bold;
-  color: #333;
+  color: var(--text-color2);
 }
 
 input,
 textarea {
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--bg2-color);
   outline: none;
   font-size: 14px;
   transition: border-color 0.3s;
@@ -703,22 +717,22 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: #e2441f;
+  border-color: var(--second-color);
 }
 
 button {
-  background-color: #e2441f;
-  color: white;
+  background-color: var(--second-color);
+  color: var(--text-color);
   border: none;
   padding: 12px;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: var(--transition);
 }
 
 button:hover {
-  background-color: #4aa5b4;
+  background-color: var(--main-color);
 }
 .popup {
   position: fixed;
@@ -726,7 +740,7 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--bg1-color);
   display: none;
   align-items: center;
   justify-content: center;
@@ -737,7 +751,7 @@ button:hover {
 }
 
 .popup-content {
-  background: #fff;
+  background: var(--text-color);
   padding: 30px;
   border-radius: 12px;
   text-align: center;
@@ -745,11 +759,11 @@ button:hover {
 }
 
 .popup-content h3 {
-  color: #4aa5b4;
+  color: var(--main-color);
 }
 
 .popup-content button {
-  background-color: #e2441f;
+  background-color: var(--second-color);
   margin-top: 10px;
 }
 
@@ -759,20 +773,20 @@ button:hover {
   height: 600px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
 /* ===== Footer ===== */
 .footer {
-  background-color: #061c21;
-  color: #b8c5c8;
+  background-color: var(--bg1-color);
+  color: var(--bg2-color);
   text-align: center;
   padding: 40px 20px;
   margin-top: 0;
 }
 
 .footer-container h3 {
-  color: #e2441f;
+  color: var(--second-color);
   font-size: 24px;
   margin-bottom: 5px;
 }
@@ -791,8 +805,8 @@ button:hover {
 }
 
 .footer-socials a {
-  color: #fff;
-  background: #e2441f;
+  color: var(--text-color);
+  background: var(--second-color);
   padding: 8px 14px;
   border-radius: 8px;
   text-decoration: none;
@@ -800,18 +814,18 @@ button:hover {
 }
 
 .footer-socials a:hover {
-  background: #4aa5b4;
+  background: var(--main-color);
 }
 
 .footer-copy {
   font-size: 14px;
-  color: #888;
+  color: var(--bg2-color);
   margin-top: 20px;
 }
 /* thems */
 .light {
-  background-color: #fff;
-  color: #333;
+  background-color: var(--text-color);
+  color: var(--text-color2);
 }
 
 /* ===== Responsive ===== */
@@ -826,10 +840,10 @@ button:hover {
   }
   header h1 {
     font-size: 20px;
-    color: #ffff;
+    color: var(--text-color);
   }
   header {
-    background-color: #000;
+    background-color: var(--bg1-color);
   }
 
   .hero-section {
