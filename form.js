@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-  const toggleCheckbox = document.querySelector(".toogle__cheakbox");
+  const toggleCheckbox = document.querySelector(".header__theme-checkbox");
   const body = document.body;
 
   // لو المستخدم اختار ثيم قبل كده، نحفظه

@@ -57,7 +57,7 @@ nav ul li a:hover {
 }
 /* toogle */
 .toogle {
-  display: flex;
+  display: none;
   align-items: center;
   margin: 0 50px;
   gap: 16px;
